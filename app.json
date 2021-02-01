@@ -1,0 +1,12 @@
+{
+  "name": "fuel-calc",
+  "displayName": "fuel-calc",
+  "expo": {
+    "name": "fuel-calc",
+    "slug": "fuel-calc",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
