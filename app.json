@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Fuel Calculator",
+    "slug": "fuel-calc",
+    "version": "0.1.0",
+    "description": "Calculates Gas/Ethanol proportion",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
