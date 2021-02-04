@@ -19,6 +19,7 @@ const CalcMain = () => {
       <TextInput
         value={ethanolPropInput}
         style={styles.textInfo}
+        testID={TEST_ID_ETHANOL_PROP_INPUT}
         onChangeText={(ethanolPropInput) => {
           setEPText(ethanolPropInput)
           setGText(getRemainingFuel(ethanolInput, ethanolPropInput, true))
@@ -32,6 +33,7 @@ const CalcMain = () => {
       <TextInput
         value={gasolineInput}
         style={styles.textInfo}
+        testID={TEST_ID_GASOLINE_INPUT}
         onChangeText={(gasolineInput) => {
           setGText(gasolineInput)
           setEText(getRemainingFuel(gasolineInput, ethanolPropInput, false))
@@ -44,6 +46,7 @@ const CalcMain = () => {
       <TextInput
         value={ethanolInput}
         style={styles.textInfo}
+        testID={TEST_ID_ETHANOL_INPUT}
         onChangeText={(ethanolInput) => {
           setEText(ethanolInput)
           setGText(getRemainingFuel(ethanolInput, ethanolPropInput, true))
@@ -64,7 +67,7 @@ function getRemainingFuel(fuelInput, ethanolPropInput, isEthanol) {
   const ethanolPropValue = Number(ethanolPropInput);
 
   const remainingFuelValue = isEthanol
-    ? fuelValue*(100 - ethanolPropValue)/(ethanolPropValue- defaultGEProp) // gasoline value
+    ? fuelValue*(100 - ethanolPropValue)/(ethanolPropValue - defaultGEProp) // gasoline value
     : fuelValue*(ethanolPropValue - defaultGEProp)/(100 - ethanolPropValue); // ethanol value
 
     return remainingFuelValue.toString();
